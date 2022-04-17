@@ -1,0 +1,47 @@
+{
+  "name": "use-pouchdb-collection",
+  "version": "1.0.0",
+  "description": "Simple React hook for PouchDB",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/mjs/index.js",
+      "require": "./lib/cjs/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rm -rf ./lib && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node esm-fix.js",
+    "prepublishOnly": "npm run build",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmartinez10/use-pouchdb-collection.git"
+  },
+  "keywords": [
+    "pouchdb",
+    "react",
+    "hook",
+    "typescript",
+    "reactive",
+    "realtime"
+  ],
+  "author": "David Martínez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidmartinez10/use-pouchdb-collection/issues"
+  },
+  "homepage": "https://github.com/davidmartinez10/use-pouchdb-collection#readme",
+  "devDependencies": {
+    "@types/pouchdb-browser": "^6.1.3",
+    "@types/react": "^18.0.5",
+    "react": "^18.0.0",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8"
+  }
+}

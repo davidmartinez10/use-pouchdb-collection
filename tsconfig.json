@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "declaration": false,
+    "outDir": "lib/esm",
+    "strict": true,
+    "lib": ["esnext"],
+    "sourceMap": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib"]
+}
