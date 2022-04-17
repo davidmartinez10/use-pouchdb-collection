@@ -7,7 +7,7 @@
   "types": "lib/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/mjs/index.js",
+      "import": "./lib/esm/index.js",
       "require": "./lib/cjs/index.js"
     }
   },
