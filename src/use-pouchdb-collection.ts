@@ -35,11 +35,12 @@ export function create_db_hook<T>(
     })
     .on("change", fetch_collection);
 
-  async function upsert(o: T & { _id?: string; _rev?: string }) {
+  async function upsert(o: T & { _id?: string; _rev?: string }, override_rev_requirement = false) {
     if (!o._id)
       throw TypeError(
         "Missing _id property. To insert a new document, include a unique ID."
       );
+    if (override_rev_requirement) o._rev = (await database.get(o._id).catch() ?? {})._rev;
     return database.put(o);
   }
 
