@@ -1,6 +1,6 @@
 {
   "name": "use-pouchdb-collection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple React hook for PouchDB",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
