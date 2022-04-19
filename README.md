@@ -1,7 +1,7 @@
 # use-pouchdb-collection
 
 No dependencies, simple React hook for PouchDB. Designed to be as simple and easy to use as `React.useState()`.
-I suggest that you take a look at the source code (it's just under 70 lines of mostly whitespace).
+I suggest that you take a look at the source code (it's just about 80 lines of mostly whitespace).
 
 # Usage
 
