@@ -53,7 +53,7 @@ export function create_db_hook<T, TransformType = T[]>(
       );
     }
     if (override_rev_requirement) {
-      o._rev = ((await database.get(o._id).catch()) ?? {})._rev;
+      o._rev = ((await database.get(o._id).catch()) || {})._rev;
     }
     return database.put(o);
   }
